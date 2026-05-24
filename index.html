@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nicole Linder | Nonprofit Consulting</title>
+
+  <meta name="description" content="Nicole Linder — Nonprofit consultant and advisor with 25+ years of executive leadership. Strategic planning, communications, fundraising, leadership development, and community reinvestment. Based in Central California, available worldwide." />
+  <meta name="keywords" content="nonprofit consulting, nonprofit advisor, strategic planning, fundraising strategy, leadership development, communications, Central California, Nicole Linder" />
+  <meta name="author" content="Nicole Linder" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Nicole Linder | Nonprofit Consulting" />
+  <meta property="og:description" content="Strategic CEO and brand architect with 25+ years of nonprofit leadership. Now consulting on strategic planning, communications, fundraising, and leadership development." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="Nicole_NatureBG.jpg" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RCWGCZ67EW"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RCWGCZ67EW');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --sage:        #6B9370;
+      --sage-dark:   #3E6444;
+      --sage-light:  #A8C4AB;
+      --sage-pale:   #E4EDE5;
+      --cream:       #F5F2EC;
+      --warm-white:  #FDFAF5;
+      --charcoal:    #1E1E1E;
+      --body-text:   #333333;
+      --muted:       #555555;
+      --gold:        #A8843A;
+      --gold-light:  #C9A45A;
+      --border:      #CFDACE;
+      --footer-bg:   #2A3A2C;
+      --footer-text: #D8E5D9;
+      --transition:  0.3s ease;
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      background: var(--warm-white);
+      color: var(--body-text);
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--cream); }
+    ::-webkit-scrollbar-thumb { background: var(--sage-light); border-radius: 3px; }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5vw;
+      height: 96px;
+      background: rgba(253,250,245,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow var(--transition);
+    }
+    nav.scrolled { box-shadow: 0 2px 20px rgba(62,100,68,0.10); }
+
+    .nav-logo { display: flex; flex-direction: column; line-height: 1.60; text-decoration: none; }
+    .nav-logo .name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem; font-weight: 600;
+      color: var(--sage-dark);
+    }
+    .nav-logo .tagline {
+      font-size: 0.85rem; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--gold); font-weight: 700;
+    }
+
+    .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.82rem; letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--body-text); font-weight: 700;
+      position: relative; padding-bottom: 3px;
+      transition: color var(--transition);
+    }
+    .nav-links a::after {
+      content: ''; position: absolute;
+      bottom: 0; left: 0; width: 0; height: 2px;
+      background: var(--sage); transition: width var(--transition);
+    }
+    .nav-links a:hover { color: var(--sage-dark); }
+    .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+
+    .nav-cta {
+      background: var(--sage-dark) !important;
+      color: #fff !important;
+      padding: 0.5rem 1.4rem !important;
+      border-radius: 3px;
+    }
+    .nav-cta:hover { background: var(--sage) !important; }
+    .nav-cta::after { display: none !important; }
+
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 4px;
+    }
+    .hamburger span {
+      display: block; width: 26px; height: 2px;
+      background: var(--charcoal); transition: var(--transition);
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none; position: fixed;
+      top: 96px; left: 0; right: 0;
+      background: var(--warm-white);
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 6vw 2rem; z-index: 99;
+      flex-direction: column; gap: 1.25rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      text-decoration: none; font-size: 0.95rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--body-text); font-weight: 700;
+    }
+
+    #home {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 72px;
+    }
+
+    .hero-left {
+      display: flex; flex-direction: column;
+      justify-content: center;
+      padding: 6vw 3vw 6vw 10vw;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.95rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); font-weight: 700;
+      margin-bottom: 1.25rem;
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: block;
+      width: 30px; height: 2px; background: var(--gold);
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 3.2vw, 3.4rem);
+      font-weight: 500; line-height: 1.15;
+      color: var(--charcoal); margin-bottom: 1.5rem;
+    }
+    .hero-title em { font-style: italic; color: var(--sage-dark); }
+
+    .hero-desc {
+      font-size: 1.05rem; color: var(--muted);
+      max-width: 430px; margin-bottom: 2.5rem; line-height: 1.8;
+    }
+
+    .hero-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+
+    .btn-primary {
+      background: var(--sage-dark); color: #fff;
+      padding: 0.85rem 2.2rem; text-decoration: none;
+      font-size: 0.82rem; letter-spacing: 0.12em;
+      text-transform: uppercase; font-weight: 700;
+      border-radius: 3px; display: inline-block;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .btn-primary:hover { background: var(--sage); transform: translateY(-2px); }
+
+    .btn-outline {
+      color: var(--sage-dark); text-decoration: none;
+      font-size: 0.82rem; letter-spacing: 0.12em;
+      text-transform: uppercase; font-weight: 700;
+      border: 2px solid var(--sage-light);
+      padding: 0.82rem 1.8rem; border-radius: 3px;
+      transition: border-color var(--transition), color var(--transition);
+    }
+    .btn-outline:hover { border-color: var(--sage-dark); color: var(--charcoal); }
+
+    .hero-right {
+      background: var(--sage-pale);
+      display: flex; align-items: stretch;
+      justify-content: center; position: relative; overflow: hidden;
+    }
+    .hero-photo-wrap {
+      width: 100%; height: 100%; min-height: 500px;
+      display: flex; align-items: center;
+      justify-content: center; position: relative;
+      padding: 60px 30px 120px 30px;
+    }
+
+    .hero-stats {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      display: flex; background: rgba(253,250,245,0.97);
+      border-top: 1px solid var(--border);
+    }
+    .stat {
+      flex: 1; padding: 1.1rem 0.5rem;
+      text-align: center; border-right: 1px solid var(--border);
+    }
+    .stat:last-child { border-right: none; }
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.9rem; font-weight: 600;
+      color: var(--sage-dark); display: block; line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.68rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--muted);
+      font-weight: 700; margin-top: 3px; display: block;
+    }
+
+    section { padding: 7rem 8vw; }
+
+    .section-eyebrow {
+      font-size: 0.72rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); font-weight: 700;
+      display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;
+    }
+    .section-eyebrow::before {
+      content: ''; display: block; width: 22px; height: 2px; background: var(--gold);
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      font-weight: 500; line-height: 1.2;
+      color: var(--charcoal); margin-bottom: 1.25rem;
+    }
+    .section-title em { font-style: italic; color: var(--sage-dark); }
+
+    .section-body {
+      font-size: 1rem; color: var(--muted);
+      max-width: 560px; line-height: 1.85;
+    }
+
+    #about { background: var(--cream); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 5rem;
+      align-items: center; margin-top: 2rem;
+    }
+
+    .right-align-column { align-items: right; }
+
+    .about-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem; font-style: italic;
+      color: var(--sage-dark); line-height: 1.65;
+      border-left: 3px solid var(--sage-light);
+      padding-left: 1.4rem; margin: 1.75rem 0;
+    }
+
+    .credentials { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1.5rem; }
+    .cred-item {
+      display: flex; align-items: flex-start; gap: 0.75rem;
+      font-size: 0.95rem; color: var(--body-text);
+    }
+    .cred-dot {
+      width: 7px; height: 7px; background: var(--sage);
+      border-radius: 50%; margin-top: 8px; flex-shrink: 0;
+    }
+
+    .credentials-strip {
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .credentials-label {
+      font-size: 0.68rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--sage);
+      font-weight: 700; margin-bottom: 1rem; display: block;
+    }
+
+    .awards-strip {
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .awards-label {
+      font-size: 0.68rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--gold);
+      font-weight: 700; margin-bottom: 1rem; display: block;
+    }
+    .awards-list { display: flex; flex-direction: column; gap: 0.5rem; }
+    .award-item {
+      display: flex; align-items: flex-start; gap: 0.6rem;
+      font-size: 0.88rem; color: var(--muted);
+    }
+    .award-star { color: var(--gold); font-size: 0.75rem; margin-top: 4px; flex-shrink: 0; }
+
+    #services { background: var(--warm-white); }
+
+    .services-intro {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 3rem; align-items: end; margin-bottom: 3.5rem;
+    }
+    .services-intro .section-body { max-width: 100%; }
+
+    .services-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5px; background: var(--border);
+      border: 1.5px solid var(--border); border-radius: 4px; overflow: hidden;
+    }
+
+    .service-card {
+      background: var(--warm-white);
+      padding: 2.25rem 1.75rem;
+      transition: background var(--transition); position: relative;
+    }
+    .service-card::before {
+      content: ''; position: absolute;
+      top: 0; left: 0; width: 100%; height: 3px;
+      background: var(--sage);
+      transform: scaleX(0); transform-origin: left;
+      transition: transform var(--transition);
+    }
+    .service-card:hover { background: var(--sage-pale); }
+    .service-card:hover::before { transform: scaleX(1); }
+
+    .service-num {
+      font-size: 0.7rem; letter-spacing: 0.1em;
+      color: var(--sage-light); font-weight: 700; margin-bottom: 0.4rem;
+    }
+    .service-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem; font-weight: 600;
+      color: var(--charcoal); margin-bottom: 0.75rem; line-height: 1.25;
+    }
+    .service-desc { font-size: 0.93rem; color: var(--muted); line-height: 1.8; }
+
+    #media-slide {
+      background: var(--sage-pale);
+      padding: 7rem 8vw;
+    }
+
+    .carousel-outer { position: relative; margin-top: 3rem; }
+
+    .carousel-track-wrap { overflow: hidden; border-radius: 6px; }
+
+    .carousel-track {
+      display: flex;
+      gap: 1.5rem;
+      transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .media-card {
+      flex: 0 0 calc(33.333% - 1rem);
+      background: var(--warm-white);
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(62,100,68,0.10);
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .media-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 36px rgba(62,100,68,0.16);
+    }
+
+    .media-card-img {
+      width: 100%; height: 220px;
+      background: linear-gradient(135deg, var(--sage-light), var(--sage-dark));
+      background-size: cover; background-position: center;
+      position: relative; display: flex;
+      align-items: center; justify-content: center; overflow: hidden;
+    }
+    .media-card-img::after {
+      content: ''; position: absolute; inset: 0;
+      background: rgba(62,100,68,0.55);
+      opacity: 0; transition: opacity var(--transition);
+    }
+    .media-card:hover .media-card-img::after { opacity: 1; }
+
+    .media-card-link {
+      position: relative; z-index: 2;
+      opacity: 0; transform: translateY(8px);
+      transition: opacity 0.35s ease, transform 0.35s ease;
+      text-decoration: none; color: #fff;
+      font-family: 'Lato', sans-serif; font-size: 0.82rem;
+      font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+      border: 2px solid rgba(255,255,255,0.8);
+      padding: 0.55rem 1.4rem; border-radius: 3px;
+    }
+    .media-card:hover .media-card-link { opacity: 1; transform: translateY(0); }
+
+    .media-card-body {
+      padding: 1.4rem 1.5rem 1.6rem;
+      display: flex; flex-direction: column; gap: 0.4rem; flex: 1;
+    }
+    .media-card-label {
+      font-size: 0.65rem; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--sage); font-weight: 700;
+    }
+    .media-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem; font-weight: 600;
+      color: var(--charcoal); line-height: 1.25;
+    }
+    .media-card-desc {
+      font-size: 0.88rem; color: var(--muted);
+      line-height: 1.7; margin-top: 0.2rem;
+    }
+
+    .carousel-btn {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 44px; height: 44px; background: var(--warm-white);
+      border: 1.5px solid var(--border); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; color: var(--sage-dark);
+      box-shadow: 0 2px 12px rgba(62,100,68,0.12);
+      transition: background var(--transition), color var(--transition); z-index: 10;
+    }
+    .carousel-btn:hover { background: var(--sage-dark); color: #fff; }
+    .carousel-btn svg { width: 18px; height: 18px; }
+    .carousel-btn.prev { left: -22px; }
+    .carousel-btn.next { right: -22px; }
+    .carousel-btn:disabled { opacity: 0.3; cursor: default; }
+    .carousel-btn:disabled:hover { background: var(--warm-white); color: var(--sage-dark); }
+
+    .carousel-dots { display: flex; justify-content: center; gap: 0.5rem; margin-top: 2rem; }
+    .carousel-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--sage-light); border: none; cursor: pointer;
+      transition: background var(--transition), transform var(--transition); padding: 0;
+    }
+    .carousel-dot.active { background: var(--sage-dark); transform: scale(1.3); }
+
+    #contact { background: var(--cream); }
+
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1.3fr;
+      gap: 5rem; margin-top: 2.5rem;
+    }
+
+    .contact-info p { color: var(--muted); margin-bottom: 2.5rem; font-size: 1rem; line-height: 1.8; }
+
+    .contact-detail { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.25rem; }
+    .contact-icon {
+      width: 38px; height: 38px;
+      border: 2px solid var(--sage-light); border-radius: 3px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--sage-dark); flex-shrink: 0;
+    }
+    .contact-icon svg { width: 17px; height: 17px; }
+    .contact-label {
+      font-size: 0.68rem; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--muted); font-weight: 700; display: block;
+      margin-bottom: 0.25rem;
+    }
+    .contact-value { font-size: 0.96rem; color: var(--body-text); }
+
+    .linkedin-contact-btn {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: #0A66C2; color: #fff; text-decoration: none;
+      font-family: 'Lato', sans-serif; font-size: 0.82rem;
+      font-weight: 700; letter-spacing: 0.08em;
+      padding: 0.5rem 1.1rem; border-radius: 3px;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .linkedin-contact-btn:hover { background: #004182; transform: translateY(-1px); }
+
+    .reveal-btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--sage-pale); border: 1.5px solid var(--sage-light);
+      color: var(--sage-dark); font-family: 'Lato', sans-serif;
+      font-size: 0.82rem; font-weight: 700; letter-spacing: 0.08em;
+      padding: 0.45rem 1rem; border-radius: 3px; cursor: pointer;
+      transition: background var(--transition), border-color var(--transition), color var(--transition);
+    }
+    .reveal-btn:hover { background: var(--sage-light); border-color: var(--sage); color: var(--charcoal); }
+    .reveal-btn svg { width: 13px; height: 13px; flex-shrink: 0; }
+
+    .contact-revealed { font-size: 0.96rem; color: var(--body-text); display: none; }
+    .contact-revealed a { color: var(--sage-dark); text-decoration: none; font-weight: 700; }
+    .contact-revealed a:hover { text-decoration: underline; }
+    .contact-revealed.shown { display: block; }
+
+    .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    .field-group { display: flex; flex-direction: column; gap: 0.4rem; }
+
+    .field-label {
+      font-size: 0.72rem; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--body-text); font-weight: 700;
+    }
+    .field-input, .field-textarea {
+      background: var(--warm-white); border: 1.5px solid var(--border);
+      padding: 0.8rem 1rem; font-family: 'Lato', sans-serif;
+      font-size: 0.95rem; color: var(--body-text);
+      border-radius: 3px; outline: none;
+      transition: border-color var(--transition);
+    }
+    .field-input:focus, .field-textarea:focus { border-color: var(--sage); }
+    .field-textarea { resize: vertical; min-height: 120px; }
+
+    .form-submit {
+      background: var(--sage-dark); color: #fff; border: none;
+      padding: 0.95rem 2.4rem; font-family: 'Lato', sans-serif;
+      font-size: 0.82rem; letter-spacing: 0.12em;
+      text-transform: uppercase; font-weight: 700;
+      cursor: pointer; border-radius: 3px; align-self: flex-start;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .form-submit:hover { background: var(--sage); transform: translateY(-2px); }
+
+    footer { background: var(--footer-bg); color: var(--footer-text); padding: 4rem 8vw 2rem; }
+
+    .footer-top {
+      display: grid; grid-template-columns: 1.6fr 1fr 1fr;
+      gap: 3.5rem; padding-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.12); margin-bottom: 1.75rem;
+    }
+
+    .footer-brand .fn {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem; font-weight: 600;
+      color: #fff; display: block; margin-bottom: 0.2rem;
+    }
+    .footer-brand .ft {
+      font-size: 0.65rem; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--gold-light);
+      font-weight: 700; display: block; margin-bottom: 1rem;
+    }
+    .footer-brand p { font-size: 0.92rem; color: rgba(216,229,217,0.85); line-height: 1.8; max-width: 280px; }
+
+    .footer-col-title {
+      font-size: 0.7rem; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--gold-light);
+      font-weight: 700; margin-bottom: 1.1rem; display: block;
+    }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
+    .footer-links a { text-decoration: none; font-size: 0.93rem; color: rgba(216,229,217,0.8); transition: color var(--transition); }
+    .footer-links a:hover { color: #fff; }
+
+    .footer-bottom {
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 0.8rem; color: rgba(216,229,217,0.55);
+    }
+    .footer-bottom a { color: rgba(216,229,217,0.55); text-decoration: none; transition: color var(--transition); }
+    .footer-bottom a:hover { color: #fff; }
+
+    /* ── CCPA PRIVACY BANNER ── */
+    #ccpa-banner {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 200;
+      background: rgba(26, 38, 28, 0.97);
+      backdrop-filter: blur(16px);
+      border-top: 1px solid rgba(168, 196, 171, 0.2);
+      padding: 1.6rem 5vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      transform: translateY(100%);
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    #ccpa-banner.visible { transform: translateY(0); }
+
+    .ccpa-left {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      flex: 1;
+    }
+    .ccpa-icon {
+      width: 36px; height: 36px;
+      border: 1.5px solid rgba(168,196,171,0.35);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--sage-light); flex-shrink: 0; margin-top: 2px;
+    }
+    .ccpa-icon svg { width: 16px; height: 16px; }
+
+    .ccpa-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem; font-weight: 600;
+      color: #fff; display: block; margin-bottom: 0.2rem;
+    }
+    .ccpa-body {
+      font-size: 0.82rem;
+      color: rgba(216,229,217,0.72);
+      line-height: 1.6;
+      max-width: 600px;
+    }
+    .ccpa-body a {
+      color: var(--sage-light);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .ccpa-body a:hover { color: #fff; }
+
+    .ccpa-actions {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .ccpa-btn-accept {
+      background: var(--sage-dark);
+      color: #fff;
+      border: none;
+      padding: 0.6rem 1.5rem;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background var(--transition);
+      white-space: nowrap;
+    }
+    .ccpa-btn-accept:hover { background: var(--sage); }
+
+    .ccpa-btn-decline {
+      background: transparent;
+      color: rgba(216,229,217,0.6);
+      border: 1px solid rgba(168,196,171,0.25);
+      padding: 0.6rem 1.5rem;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: color var(--transition), border-color var(--transition);
+      white-space: nowrap;
+    }
+    .ccpa-btn-decline:hover { color: #fff; border-color: rgba(168,196,171,0.5); }
+
+    @media (max-width: 700px) {
+      #ccpa-banner { flex-direction: column; align-items: flex-start; gap: 1.25rem; }
+      .ccpa-actions { width: 100%; }
+      .ccpa-btn-accept, .ccpa-btn-decline { flex: 1; text-align: center; }
+    }
+
+    @media (max-width: 900px) {
+      #home { grid-template-columns: 1fr; }
+      .hero-right { display: none; }
+      .hero-left { padding: 4rem 6vw; min-height: calc(100vh - 72px); }
+      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .services-intro { grid-template-columns: 1fr; gap: 1.5rem; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      section { padding: 5rem 6vw; }
+      .media-card { flex: 0 0 calc(100% - 0px); }
+      .carousel-btn.prev { left: -10px; }
+      .carousel-btn.next { right: -10px; }
+    }
+    @media (max-width: 600px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 0.4rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CCPA Privacy Banner -->
+  <div id="ccpa-banner" role="dialog" aria-label="Privacy Notice">
+    <div class="ccpa-left">
+      <div class="ccpa-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      </div>
+      <div class="ccpa-text">
+        <span class="ccpa-title">Your Privacy Matters</span>
+        <p class="ccpa-body">
+          This site uses cookies and analytics to improve your experience. Under the California Consumer Privacy Act (CCPA), you have the right to know, delete, and opt out of the collection of your personal information. We do not sell your data.
+          <a href="#contact">Learn more or contact us.</a>
+        </p>
+      </div>
+    </div>
+    <div class="ccpa-actions">
+      <button class="ccpa-btn-decline" id="ccpaDecline">Opt Out of Analytics</button>
+      <button class="ccpa-btn-accept" id="ccpaAccept">Accept &amp; Continue</button>
+    </div>
+  </div>
+
+  <nav id="navbar">
+    <a href="#home" class="nav-logo">
+      <span class="name">Nicole Linder</span>
+      <span class="tagline">Nonprofit Consulting</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#media-slide">Media</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#media-slide">Media</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <section id="home">
+    <div class="hero-left">
+      <p class="hero-eyebrow">Nonprofit Consultant & Advisor</p>
+      <h1 class="hero-title">
+        Executive insight.<br>
+        Community impact.<br>
+        <em>Lasting results.</em>
+      </h1>
+      <p class="hero-desc">
+        Strategic CEO and brand architect with 25+ years leading high-growth organizations — now applying executive-level expertise to strategic planning, communications, leadership development, fundraising strategy and community reinvestment.
+      </p>
+      <div class="hero-actions">
+        <a href="#services" class="btn-primary">Explore Services</a>
+        <a href="#about" class="btn-outline">About Nicole</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-photo-wrap">
+        <img src="Nicole_NatureBG.jpg" alt="Nicole Linder" style="width:68%; aspect-ratio:3/4; object-fit:cover; border-radius:4px; box-shadow:20px 20px 60px rgba(62,100,68,0.18);" />
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">25+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Mission Driven</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="about-grid">
+      <img class="right-align-column" src="Nicole_Mic.jpg" alt="Nicole Linder" style="width:68%; aspect-ratio:3/4; object-fit:cover; border-radius:4px; box-shadow:20px 20px 60px rgba(62,100,68,0.18);" />
+
+      <div>
+        <p class="section-eyebrow">About</p>
+        <h2 class="section-title">A trusted partner in <em>meaningful work.</em></h2>
+        <p class="section-body">
+          Strategic CEO and brand architect with 25+ years leading high-growth organizations. Deep experience shaping corporate narrative, driving investor and donor response, crafting media exposure, and strengthening brand equity. Nicole now applies that executive-level insight to community reinvestment, strategic planning and positioning, communications, public relations, reputation management, and leadership development.
+        </p>
+        <blockquote class="about-quote">
+          "I firmly believe leadership is not done in a vacuum — nobody gets to where they are without helping hands, wonderful mentors, and people willing to tell you hard truths."
+        </blockquote>
+
+        <div class="credentials-strip">
+          <span class="credentials-label">Experience</span>
+          <div class="credentials">
+            <div class="cred-item"><span class="cred-dot"></span><span>CEO, Marjaree Mason Center (2016–2026) — Scaled programs, increased impact and brand awareness, led crisis management during COVID, doubled operating budget, grew net assets by over 600%, designed, built and raised funds to produce a debt-free, trauma-informed facility.</span></div>
+            <div class="cred-item"><span class="cred-dot"></span><span>Senior Development Officer, Valley Children's Healthcare Foundation (2013–2016)</span></div>
+            <div class="cred-item"><span class="cred-dot"></span><span>Major Gifts Officer, Fresno Pacific University (2002–2013)</span></div>
+            <div class="cred-item"><span class="cred-dot"></span><span>Fresno State University Advisory Board Member (2017 - present)</span></div>
+            <div class="cred-item"><span class="cred-dot"></span><span>B.A., Mass Communication & Journalism — California State University, Fresno</span></div>
+          </div>
+        </div>
+
+        <div class="awards-strip">
+          <span class="awards-label">Recognition & Awards</span>
+          <div class="awards-list">
+            <div class="award-item"><span class="award-star">★</span><span>CEO of the Year — Fresno Business Journal, 2025</span></div>
+            <div class="award-item"><span class="award-star">★</span><span>Nonprofit of the Year — Fresno Business Journal, 2025, 2024, 2022, 2021, 2020, 2019, 2018</span></div>
+            <div class="award-item"><span class="award-star">★</span><span>Fresno State "Top Dog Distinguished Alumna" — 2024</span></div>
+            <div class="award-item"><span class="award-star">★</span><span>Woman of the Year — CA Assemblymember Jim Patterson, 2024</span></div>
+            <div class="award-item"><span class="award-star">★</span><span>Difference Maker of the Year — GV Wire, 2024</span></div>
+            <div class="award-item"><span class="award-star">★</span><span>Bank of America Neighborhood Champion Award — 2021</span></div>
+            <div class="award-item"><span class="award-star">★</span><span>City of Fresno Community Partner Award — Mayor Lee Brand, 2018</span></div>
+            <div class="award-item"><span class="award-star">★</span><span>Resnick Aspen Action Forum Fellow — 2017</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="services-intro">
+      <div>
+        <p class="section-eyebrow">Services</p>
+        <h2 class="section-title">Expertise tailored to <em>your mission.</em></h2>
+      </div>
+      <p class="section-body">
+        Each engagement is custom-designed to address your organization's unique needs, culture, and long-term goals. No cookie-cutter solutions — only thoughtful, clear, and mission-aligned guidance.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <p class="service-num">01</p>
+        <h3 class="service-title">Strategic Planning & Positioning</h3>
+        <p class="service-desc">Facilitating long-range planning that aligns vision, mission, and measurable outcomes for sustainable organizational health and community impact.</p>
+      </div>
+      <div class="service-card">
+        <p class="service-num">02</p>
+        <h3 class="service-title">Communications, Public Relations & Reputation Management</h3>
+        <p class="service-desc">Shaping corporate narrative, managing media exposure, and strengthening brand equity across donor, government, and public platforms. Directing crisis communication, agency rebranding, and stewarding internal and external narratives to align mission with public perception.</p>
+      </div>
+      <div class="service-card">
+        <p class="service-num">03</p>
+        <h3 class="service-title">Keynote & Motivational Speaking</h3>
+        <p class="service-desc">Delivering strong public speaking and presentations since a young age, Nicole is skilled as a media spokesperson, panelist and keynote and motivational speaker from subjects ranging from women's issues to leadership, fundraising to faith.</p>
+      </div>
+      <div class="service-card">
+        <p class="service-num">04</p>
+        <h3 class="service-title">Fundraising & Donor Strategy</h3>
+        <p class="service-desc">Driving investor and donor response through major gift programs, capital campaigns, and community-based partnership development.</p>
+      </div>
+      <div class="service-card">
+        <p class="service-num">05</p>
+        <h3 class="service-title">Leadership Development & Transition</h3>
+        <p class="service-desc">Executive coaching and transition planning for nonprofit leaders navigating organizational change, board dynamics, and succession planning.</p>
+      </div>
+      <div class="service-card">
+        <p class="service-num">06</p>
+        <h3 class="service-title">Community Reinvestment & Impact</h3>
+        <p class="service-desc">Building community-based partnerships, overseeing board management, and guiding capital projects that create lasting, debt-free community resources.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="media-slide">
+    <p class="section-eyebrow">Media & Visibility</p>
+    <h2 class="section-title">News, Videos, and Inspiration from <em>Nicole</em></h2>
+
+    <div class="carousel-outer">
+      <button class="carousel-btn prev" id="prevBtn" aria-label="Previous">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+
+      <div class="carousel-track-wrap">
+        <div class="carousel-track" id="carouselTrack">
+
+          <div class="media-card">
+            <div class="media-card-img" style="background-image: url('TopDogVideo.png');">
+              <a href="https://youtu.be/lC0wuHEYoCU?si=uptgPsdI6kNR1dsB&t=1303" class="media-card-link" target="_blank" rel="noopener noreferrer">Watch Video</a>
+            </div>
+            <div class="media-card-body">
+              <span class="media-card-label">Video · Fresno State</span>
+              <h3 class="media-card-title">Top Dog Alumni Award Video</h3>
+              <p class="media-card-desc">Watch Nicole's full Top Dog recognition video — her story of leadership, resilience, and community impact told in her own words.</p>
+            </div>
+          </div>
+
+          <div class="media-card">
+            <div class="media-card-img" style="background-image: url('ABC30-Interview.jpg');">
+              <a href="https://abc30.com/post/exclusive-marjaree-mason-center-ceo-nicole-linder-stepping-down/17883238/" class="media-card-link" target="_blank" rel="noopener noreferrer">Watch Interview</a>
+            </div>
+            <div class="media-card-body">
+              <span class="media-card-label">Interview · ABC30</span>
+              <h3 class="media-card-title">EXCLUSIVE: Marjaree Mason Center CEO Nicole Linder stepping down</h3>
+              <p class="media-card-desc">Nicole sits down with ABC30 to discuss her decade of leadership at the Marjaree Mason Center and her vision for community reinvestment.</p>
+            </div>
+          </div>
+
+          <div class="media-card">
+            <div class="media-card-img" style="background-image: url('21-Days-Of-Prayer-Interview.png');">
+              <a href="https://youtu.be/sgFBrDkVAjU?si=i88duP8r8jQm7xfH" class="media-card-link" target="_blank" rel="noopener noreferrer">Watch Video</a>
+            </div>
+            <div class="media-card-body">
+              <span class="media-card-label">Podcast · NewCov Fresno</span>
+              <h3 class="media-card-title">21 Days of Prayer | Day 10 | Domestic Violence</h3>
+              <p class="media-card-desc">Nicole Linder joins NewCov Fresno's 21 Days of Prayer series to speak on the issue of domestic violence, sharing her perspective as CEO of the Marjaree Mason Center and her commitment to building safer families in the Fresno community.</p>
+            </div>
+          </div>
+
+          <div class="media-card">
+            <div class="media-card-img" style="background-image: url('TopDogBiography.png');">
+              <a href="https://topdog.fresnostate.edu/honorees.html#:~:text=Distinguished%20Alumni%20Award" class="media-card-link" target="_blank" rel="noopener noreferrer">Learn More</a>
+            </div>
+            <div class="media-card-body">
+              <span class="media-card-label">Feature · Fresno State</span>
+              <h3 class="media-card-title">Top Dog Biography</h3>
+              <p class="media-card-desc">Nicole named with Fresno State's Top Dog Distinguished Alumna Award — recognizing her transformative leadership in the Central Valley nonprofit community.</p>
+            </div>
+          </div>
+
+          <div class="media-card">
+            <div class="media-card-img" style="background-image: url('Buisiness-Journal-NL.jpg');">
+              <a href="https://thebusinessjournal.com/marjaree-mason-center-says-goodbye-to-nicole-linder-names-interim-ceo/" class="media-card-link" target="_blank" rel="noopener noreferrer">Learn More</a>
+            </div>
+            <div class="media-card-body">
+              <span class="media-card-label">Article · The Buisiness Journal</span>
+              <h3 class="media-card-title">Marjaree Mason Center says goodbye to Nicole Linder, names interim CEO</h3>
+              <p class="media-card-desc">The Marjaree Mason Center is seeking a new permanent CEO following Nicole Linder's departure after nearly a decade, during which she expanded shelter capacity and completed a $20 million facility renovation to enhance services for victims and their families.</p>
+            </div>
+          </div>
+
+          <div class="media-card">
+            <div class="media-card-img" style="background-image: url('MedWatch-Today-NL.png');">
+              <a href="https://youtu.be/pyed9HfHCh4?si=q3S7ClKY8h_Fvv5G" class="media-card-link" target="_blank" rel="noopener noreferrer">Watch Video</a>
+            </div>
+            <div class="media-card-body">
+              <span class="media-card-label">Video · MedWatch Today</span>
+              <h3 class="media-card-title">Marjaree Mason Center's New Expansion: New Services for Domestic Violence Survivors</h3>
+              <p class="media-card-desc">Nicole Linder speaks with MedWatch Today about the Marjaree Mason Center's landmark expansion — a brand-new facility doubling the organization's capacity to provide safe shelter, counseling, mental health services, and vital resources to domestic violence survivors across Fresno County.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <button class="carousel-btn next" id="nextBtn" aria-label="Next">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <p class="section-eyebrow">Contact</p>
+    <h2 class="section-title">Let's start a <em>conversation.</em></h2>
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <p>Every organization is unique. Reach out to schedule a complimentary discovery call and explore how we might work together.</p>
+
+        <div class="contact-detail">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <div>
+            <span class="contact-label">Email</span>
+            <button class="reveal-btn" onclick="revealContact('email-reveal', this)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              Click to view
+            </button>
+            <span class="contact-revealed" id="email-reveal"><a id="email-link" href="#">loading...</a></span>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          </div>
+          <div>
+            <span class="contact-label">Phone</span>
+            <button class="reveal-btn" onclick="revealContact('phone-reveal', this)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              Click to view
+            </button>
+            <span class="contact-revealed" id="phone-reveal"><a id="phone-link" href="#">loading...</a></span>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <div>
+            <span class="contact-label">Location</span>
+            <span class="contact-value">Central California · Available for engagements worldwide</span>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <div>
+            <span class="contact-label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/nicolemlinder?trk=public_post_feed-actor-name" target="_blank" class="linkedin-contact-btn">
+              Connect on LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formspree: replace YOUR_FORM_ID with your ID from formspree.io/forms -->
+      <form class="contact-form" action="https://formspree.io/f/mzdwavlz" method="POST">
+        <div class="form-row">
+          <div class="field-group">
+            <label class="field-label" for="firstName">First Name</label>
+            <input class="field-input" id="firstName" type="text" name="first_name" placeholder="Jane" required />
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="lastName">Last Name</label>
+            <input class="field-input" id="lastName" type="text" name="last_name" placeholder="Smith" required />
+          </div>
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="email">Email</label>
+          <input class="field-input" id="email" type="email" name="email" placeholder="jane@organization.org" required />
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="org">Organization</label>
+          <input class="field-input" id="org" type="text" name="organization" placeholder="Your Organization Name" />
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="message">How can I help?</label>
+          <textarea class="field-textarea" id="message" name="message" placeholder="Tell me a bit about your organization and what you're working through..." required></textarea>
+        </div>
+        <button class="form-submit" type="submit" id="submitBtn">Send Message</button>
+      </form>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="fn">Nicole Linder</span>
+        <span class="ft">Nonprofit Consulting</span>
+        <p>Visionary leader and communicator dedicated to helping mission-driven organizations build capacity, clarity, and lasting community impact.</p>
+      </div>
+
+      <div>
+        <span class="footer-col-title">Navigation</span>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#media-slide">Media</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <span class="footer-col-title">Services</span>
+        <ul class="footer-links">
+          <li><a href="#services">Strategic Planning</a></li>
+          <li><a href="#services">Communications, PR & Reputation Management</a></li>
+          <li><a href="#services">Keynote & Motivational Speaking</a></li>
+          <li><a href="#services">Fundraising Strategy</a></li>
+          <li><a href="#services">Leadership Development</a></li>
+          <li><a href="#services">Community Reinvestment</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Nicole Linder Consulting. All rights reserved.</span>
+      <span>Central California · Available for engagements worldwide &nbsp;·&nbsp; <a href="#" id="ccpaReopen">Privacy Preferences</a></span>
+    </div>
+  </footer>
+
+  <script>
+    // NAV scroll shadow
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const ioNav = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navLinks.forEach(a => {
+            a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id);
+          });
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    sections.forEach(s => ioNav.observe(s));
+
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      });
+    });
+
+    // Contact form — GA4 event + Formspree submission feedback
+    const submitBtn = document.getElementById('submitBtn');
+    const contactForm = document.querySelector('.contact-form');
+    contactForm.addEventListener('submit', (e) => {
+      if (typeof gtag !== 'G-RCWGCZ67EW') {
+        gtag('event', 'form_submit', { event_category: 'Contact', event_label: 'Contact Form' });
+      }
+      submitBtn.textContent = 'Message Sent ✓';
+      submitBtn.style.background = 'var(--sage)';
+      submitBtn.disabled = true;
+      setTimeout(() => {
+        submitBtn.textContent = 'Send Message';
+        submitBtn.style.background = '';
+        submitBtn.disabled = false;
+      }, 4000);
+    });
+
+    // Click-to-reveal contact info (assembled in JS, never in HTML source)
+    function revealContact(id, btn) {
+      const el = document.getElementById(id);
+      el.classList.add('shown');
+      btn.style.display = 'none';
+      if (id === 'email-reveal') {
+        const link = document.getElementById('email-link');
+        link.href = 'mailto:' + 'nicolelinderconsulting' + '@' + 'gmail.com';
+        link.textContent = 'nicolelinderconsulting' + '@' + 'gmail.com';
+      }
+      if (id === 'phone-reveal') {
+        const link = document.getElementById('phone-link');
+        link.href = 'tel:+15599780587';
+        link.textContent = '(559) 978-0587';
+      }
+    }
+
+    // CCPA privacy banner
+    (function () {
+      const banner  = document.getElementById('ccpa-banner');
+      const accept  = document.getElementById('ccpaAccept');
+      const decline = document.getElementById('ccpaDecline');
+      const reopen  = document.getElementById('ccpaReopen');
+      const PREF_KEY = 'nl_privacy_pref';
+
+      function hideBanner() {
+        banner.classList.remove('visible');
+      }
+
+      function showBanner() {
+        setTimeout(() => banner.classList.add('visible'), 600);
+      }
+
+      // Disable GA4 tracking if user opted out
+      function applyOptOut() {
+        window['ga-disable-G-RCWGCZ67EW'] = true;
+      }
+
+      const stored = localStorage.getItem(PREF_KEY);
+      if (!stored) {
+        showBanner();
+      } else if (stored === 'declined') {
+        applyOptOut();
+      }
+
+      accept.addEventListener('click', () => {
+        localStorage.setItem(PREF_KEY, 'accepted');
+        hideBanner();
+      });
+
+      decline.addEventListener('click', () => {
+        localStorage.setItem(PREF_KEY, 'declined');
+        applyOptOut();
+        hideBanner();
+      });
+
+      reopen.addEventListener('click', (e) => {
+        e.preventDefault();
+        showBanner();
+      });
+    })();
+
+    // Media carousel
+    (function () {
+      const track    = document.getElementById('carouselTrack');
+      const prevBtn  = document.getElementById('prevBtn');
+      const nextBtn  = document.getElementById('nextBtn');
+      const dotsWrap = document.getElementById('carouselDots');
+      const cards    = track.querySelectorAll('.media-card');
+      const total    = cards.length;
+      let current    = 0;
+
+      function visibleCount() {
+        return window.innerWidth <= 900 ? 1 : 3;
+      }
+
+      function buildDots() {
+        dotsWrap.innerHTML = '';
+        const pages = Math.ceil(total / visibleCount());
+        for (let i = 0; i < pages; i++) {
+          const dot = document.createElement('button');
+          dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+          dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+          dot.addEventListener('click', () => goTo(i));
+          dotsWrap.appendChild(dot);
+        }
+      }
+
+      function updateDots() {
+        dotsWrap.querySelectorAll('.carousel-dot').forEach((d, i) => {
+          d.classList.toggle('active', i === current);
+        });
+      }
+
+      function goTo(index) {
+        const vc = visibleCount();
+        const maxIndex = Math.ceil(total / vc) - 1;
+        current = Math.max(0, Math.min(index, maxIndex));
+        const step = (cards[0].offsetWidth + 24) * vc;
+        track.style.transform = `translateX(-${current * step}px)`;
+        prevBtn.disabled = current === 0;
+        nextBtn.disabled = current === maxIndex;
+        updateDots();
+      }
+
+      prevBtn.addEventListener('click', () => goTo(current - 1));
+      nextBtn.addEventListener('click', () => goTo(current + 1));
+      window.addEventListener('resize', () => { current = 0; buildDots(); goTo(0); });
+
+      buildDots();
+      goTo(0);
+    })();
+  </script>
+</body>
+</html>
