@@ -21,7 +21,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-RCWGCZ67EW');
   </script>
 
@@ -568,7 +567,8 @@
     .footer-bottom a { color: rgba(216,229,217,0.55); text-decoration: none; transition: color var(--transition); }
     .footer-bottom a:hover { color: #fff; }
 
-    /* ── CCPA PRIVACY BANNER ── */
+    /* CCPA PRIVACY BANNER */
+    
     #ccpa-banner {
       position: fixed;
       bottom: 0; left: 0; right: 0;
@@ -660,16 +660,53 @@
     }
     .ccpa-btn-decline:hover { color: #fff; border-color: rgba(168,196,171,0.5); }
 
+    /* Mobile CCPA Banner */
+
     @media (max-width: 700px) {
-      #ccpa-banner { flex-direction: column; align-items: flex-start; gap: 1.25rem; }
-      .ccpa-actions { width: 100%; }
-      .ccpa-btn-accept, .ccpa-btn-decline { flex: 1; text-align: center; }
+      #ccpa-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+        padding: 1.4rem 5vw;
+      }
+      .ccpa-left { gap: 0.75rem; }
+      .ccpa-icon { display: none; }
+      .ccpa-actions {
+        width: 100%;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+      .ccpa-btn-accept,
+      .ccpa-btn-decline {
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem 1rem;
+      }
     }
 
     @media (max-width: 900px) {
-      #home { grid-template-columns: 1fr; }
-      .hero-right { display: none; }
-      .hero-left { padding: 4rem 6vw; min-height: calc(100vh - 72px); }
+      #home {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding-top: 96px;
+      }
+      .hero-left {
+        padding: 3rem 6vw 2.5rem;
+        min-height: auto;
+      }
+
+      .hero-right {
+        display: flex;
+        min-height: 380px;
+      }
+      .hero-photo-wrap {
+        min-height: 380px;
+        padding: 40px 6vw 100px;
+      }
+      .hero-photo-wrap img {
+        width: 55% !important;
+      }
+
       .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .services-intro { grid-template-columns: 1fr; gap: 1.5rem; }
       .services-grid { grid-template-columns: 1fr 1fr; }
@@ -682,10 +719,12 @@
       .carousel-btn.prev { left: -10px; }
       .carousel-btn.next { right: -10px; }
     }
+
     @media (max-width: 600px) {
       .services-grid { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; gap: 0.4rem; text-align: center; }
+      .hero-photo-wrap img { width: 70% !important; }
     }
   </style>
 </head>
@@ -1007,7 +1046,6 @@
         </div>
       </div>
 
-      <!-- Formspree: replace YOUR_FORM_ID with your ID from formspree.io/forms -->
       <form class="contact-form" action="https://formspree.io/f/mzdwavlz" method="POST">
         <div class="form-row">
           <div class="field-group">
@@ -1127,7 +1165,7 @@
       }, 4000);
     });
 
-    // Click-to-reveal contact info (assembled in JS, never in HTML source)
+    // Click-to-reveal contact info
     function revealContact(id, btn) {
       const el = document.getElementById(id);
       el.classList.add('shown');
@@ -1152,18 +1190,9 @@
       const reopen  = document.getElementById('ccpaReopen');
       const PREF_KEY = 'nl_privacy_pref';
 
-      function hideBanner() {
-        banner.classList.remove('visible');
-      }
-
-      function showBanner() {
-        setTimeout(() => banner.classList.add('visible'), 600);
-      }
-
-      // Disable GA4 tracking if user opted out
-      function applyOptOut() {
-        window['ga-disable-G-RCWGCZ67EW'] = true;
-      }
+      function hideBanner() { banner.classList.remove('visible'); }
+      function showBanner() { setTimeout(() => banner.classList.add('visible'), 600); }
+      function applyOptOut() { window['ga-disable-G-RCWGCZ67EW'] = true; }
 
       const stored = localStorage.getItem(PREF_KEY);
       if (!stored) {
@@ -1172,21 +1201,9 @@
         applyOptOut();
       }
 
-      accept.addEventListener('click', () => {
-        localStorage.setItem(PREF_KEY, 'accepted');
-        hideBanner();
-      });
-
-      decline.addEventListener('click', () => {
-        localStorage.setItem(PREF_KEY, 'declined');
-        applyOptOut();
-        hideBanner();
-      });
-
-      reopen.addEventListener('click', (e) => {
-        e.preventDefault();
-        showBanner();
-      });
+      accept.addEventListener('click', () => { localStorage.setItem(PREF_KEY, 'accepted'); hideBanner(); });
+      decline.addEventListener('click', () => { localStorage.setItem(PREF_KEY, 'declined'); applyOptOut(); hideBanner(); });
+      reopen.addEventListener('click', (e) => { e.preventDefault(); showBanner(); });
     })();
 
     // Media carousel
