@@ -23,7 +23,7 @@
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="canonical" href="https://www.nicolelinderconsulting.com/">
 
-  <title>Nicole Linder | Nonprofit Consulting</title>
+  <title>Nicole Linder Consulting</title>
 
   <meta name="description" content="Nicole Linder — Nonprofit consultant and advisor with 25+ years of executive leadership. Strategic planning, communications, fundraising, leadership development, and community reinvestment. Based in Central California, available worldwide." />
   <meta name="keywords" content="nonprofit consulting, nonprofit advisor, strategic planning, fundraising strategy, leadership development, communications, Central California, Nicole Linder" />
@@ -196,7 +196,22 @@
 
     .hero-desc {
       font-size: 1.05rem; color: var(--muted);
-      max-width: 430px; margin-bottom: 2.5rem; line-height: 1.8;
+      max-width: 430px; margin-bottom: 1rem; line-height: 1.8;
+    }
+
+    .hero-strip {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-item {
+      display: flex; align-items: flex-start; gap: 0.75rem;
+      font-size: 1.05rem; color: var(--body-text);
+    }
+
+    .hero-dot {
+      color: var(--gold); font-size: 0.75rem; margin-top: 4px; flex-shrink: 0; ;
     }
 
     .hero-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
@@ -215,7 +230,7 @@
       color: var(--sage-dark); text-decoration: none;
       font-size: 0.82rem; letter-spacing: 0.12em;
       text-transform: uppercase; font-weight: 700;
-      border: 2px solid var(--sage-light);
+      border: 2.5px solid var(--sage-light);
       padding: 0.82rem 1.8rem; border-radius: 3px;
       transition: border-color var(--transition), color var(--transition);
     }
@@ -713,13 +728,13 @@
       .hero-left {
         padding: 3rem 6vw 2.5rem;
         min-height: auto;
-        order: 2;
+        grid-row: 2;
       }
 
       .hero-right {
         display: flex;
         min-height: 380px;
-        order: 1;
+        grid-row: 1;
       }
       .hero-photo-wrap {
         min-height: 380px;
@@ -777,7 +792,7 @@
   <nav id="navbar">
     <a href="#home" class="nav-logo">
       <span class="name">Nicole Linder</span>
-      <span class="tagline">Nonprofit Consulting</span>
+      <span class="tagline">Consulting</span>
     </a>
     <ul class="nav-links">
       <li><a href="#home" class="active">Home</a></li>
@@ -801,18 +816,27 @@
 
   <section id="home">
     <div class="hero-left">
-      <p class="hero-eyebrow">Nonprofit Consultant & Advisor</p>
+      <p class="hero-eyebrow">Nonprofit & Philanthropic Advisor</p>
+
       <h1 class="hero-title">
         Executive insight.<br>
         Community impact.<br>
         <em>Lasting results.</em>
       </h1>
-      <p class="hero-desc">
-        Strategic CEO and brand architect with 25+ years leading high-growth organizations — now applying executive-level expertise to strategic planning, communications, leadership development, fundraising strategy and community reinvestment.
-      </p>
+
+      <div class="hero-desc">
+        <div class="hero-strip">
+          <div class="hero-item"><span class="hero-dot">➤</span><span>Do you feel your organization is stuck?</span></div>
+          <div class="hero-item"><span class="hero-dot">➤</span><span>Could you benefit from confidential, experienced support navigating executive leadership and board governance?</span></div>
+          <div class="hero-item"><span class="hero-dot">➤</span><span>Do you require an outside evaluation of your revenue generation techniques and recommendations to meet your financial goals?</span></div>
+          <div class="hero-item"><span class="hero-dot">➤</span><span>Do you have a desire and community need to scale programming, but need a trusted partner to create a plan to reach the desired scale?</span></div>
+          <div class="hero-item"><span class="hero-dot">➤</span><span>Are you a philanthropist wanting to invest in worthy organizations, but don't know where to start?</span></div>
+        </div>
+      </div>
+
       <div class="hero-actions">
-        <a href="#services" class="btn-primary">Explore Services</a>
         <a href="#about" class="btn-outline">About Nicole</a>
+        <a href="#services" class="btn-primary">Explore Services</a>
       </div>
     </div>
 
@@ -841,7 +865,9 @@
         <p class="section-eyebrow">About</p>
         <h2 class="section-title">A trusted partner in <em>meaningful work.</em></h2>
         <p class="section-body">
-          Strategic CEO and brand architect with 25+ years leading high-growth organizations. Deep experience shaping corporate narrative, driving investor and donor response, crafting media exposure, and strengthening brand equity. Nicole now applies that executive-level insight to community reinvestment, strategic planning and positioning, communications, public relations, reputation management, and leadership development.
+          A strategic CEO and brand architect with 25+ years leading high-growth organizations, Nicole has deep experience shaping corporate narrative, driving investor and donor response, crafting media exposure, and 
+          strengthening brand equity. She now applies that executive-level insight to support other leaders and organizations in enhancing strategic planning and positioning, communications, public relations, brand management, 
+          revenue generation, board governance, and leadership development. As an experienced non-profit fundraiser, Nicole has developed deep trust with donors to help them reach their philanthropic goals and intrests.
         </p>
         <blockquote class="about-quote">
           "I firmly believe leadership is not done in a vacuum — nobody gets to where they are without helping hands, wonderful mentors, and people willing to tell you hard truths."
@@ -882,7 +908,7 @@
         <h2 class="section-title">Expertise tailored to <em>your mission.</em></h2>
       </div>
       <p class="section-body">
-        Each engagement is custom-designed to address your organization's unique needs, culture, and long-term goals. No cookie-cutter solutions — only thoughtful, clear, and mission-aligned guidance.
+        Each engagement is custom-designed to address your organization's unique needs, culture, and long-term goals. No cookie-cutter solutions - only thoughtful, clear, and mission-aligned guidance.
       </p>
     </div>
 
@@ -894,7 +920,7 @@
       </div>
       <div class="service-card">
         <p class="service-num">02</p>
-        <h3 class="service-title">Communications, Public Relations & Reputation Management</h3>
+        <h3 class="service-title">Communications, Public Relations & Brand Management</h3>
         <p class="service-desc">Shaping corporate narrative, managing media exposure, and strengthening brand equity across donor, government, and public platforms. Directing crisis communication, agency rebranding, and stewarding internal and external narratives to align mission with public perception.</p>
       </div>
       <div class="service-card">
@@ -914,8 +940,8 @@
       </div>
       <div class="service-card">
         <p class="service-num">06</p>
-        <h3 class="service-title">Community Reinvestment & Impact</h3>
-        <p class="service-desc">Building community-based partnerships, overseeing board management, and guiding capital projects that create lasting, debt-free community resources.</p>
+        <h3 class="service-title">Donor Advisor, Community Reinvestment & Impact</h3>
+        <p class="service-desc">Creating a charitable investment strategy that meets a company, foundation, or donor financial and philanthropic goals. </p>
       </div>
     </div>
   </section>
@@ -1101,7 +1127,7 @@
     <div class="footer-top">
       <div class="footer-brand">
         <span class="fn">Nicole Linder</span>
-        <span class="ft">Nonprofit Consulting</span>
+        <span class="ft">Consulting</span>
         <p>Visionary leader and communicator dedicated to helping mission-driven organizations build capacity, clarity, and lasting community impact.</p>
       </div>
 
@@ -1119,12 +1145,12 @@
       <div>
         <span class="footer-col-title">Services</span>
         <ul class="footer-links">
-          <li><a href="#services">Strategic Planning</a></li>
-          <li><a href="#services">Communications, PR & Reputation Management</a></li>
+          <li><a href="#services">Strategic Planning & Positioning</a></li>
+          <li><a href="#services">Communications, PR & Brand Management</a></li>
           <li><a href="#services">Keynote & Motivational Speaking</a></li>
-          <li><a href="#services">Fundraising Strategy</a></li>
-          <li><a href="#services">Leadership Development</a></li>
-          <li><a href="#services">Community Reinvestment</a></li>
+          <li><a href="#services">Fundraising & Donor Strategy</a></li>
+          <li><a href="#services">Leadership Development & Transition</a></li>
+          <li><a href="#services">Donor Advisor, Community Reinvestment & Impact</a></li>
         </ul>
       </div>
     </div>
