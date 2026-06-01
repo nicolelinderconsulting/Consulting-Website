@@ -1,8 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Nicole Linder Consulting",
+  "url": "https://www.nicolelinderconsulting.com",
+  "image": "https://www.nicolelinderconsulting.com/Nicole_NatureBG.jpg",
+  "description": "Nonprofit consulting services including strategic planning, fundraising, communications, leadership development, and community reinvestment.",
+  "telephone": "+1-559-978-0587",
+  "email": "nicolelinderconsulting@gmail.com",
+  "areaServed": "Fresno, CA",
+  "founder": {
+    "@type": "Person",
+    "name": "Nicole Linder"
+  }
+}
+</script>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="canonical" href="https://www.nicolelinderconsulting.com/">
+
   <title>Nicole Linder | Nonprofit Consulting</title>
 
   <meta name="description" content="Nicole Linder — Nonprofit consultant and advisor with 25+ years of executive leadership. Strategic planning, communications, fundraising, leadership development, and community reinvestment. Based in Central California, available worldwide." />
@@ -13,7 +33,7 @@
   <meta property="og:title" content="Nicole Linder | Nonprofit Consulting" />
   <meta property="og:description" content="Strategic CEO and brand architect with 25+ years of nonprofit leadership. Now consulting on strategic planning, communications, fundraising, and leadership development." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="Nicole_NatureBG.jpg" />
+  <meta property="og:image" content="https://www.nicolelinderconsulting.com/Nicole_NatureBG.jpg" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RCWGCZ67EW"></script>
@@ -693,11 +713,13 @@
       .hero-left {
         padding: 3rem 6vw 2.5rem;
         min-height: auto;
+        order: 2;
       }
 
       .hero-right {
         display: flex;
         min-height: 380px;
+        order: 1;
       }
       .hero-photo-wrap {
         min-height: 380px;
@@ -813,7 +835,7 @@
 
   <section id="about">
     <div class="about-grid">
-      <img class="right-align-column" src="Nicole_Mic.jpg" alt="Nicole Linder" style="width:68%; aspect-ratio:3/4; object-fit:cover; border-radius:4px; box-shadow:20px 20px 60px rgba(62,100,68,0.18);" />
+      <img class="right-align-column" src="Nicole_Mic.jpg" loading="lazy" alt="Nicole Linder" style="width:68%; aspect-ratio:3/4; object-fit:cover; border-radius:4px; box-shadow:20px 20px 60px rgba(62,100,68,0.18);" />
 
       <div>
         <p class="section-eyebrow">About</p>
@@ -1152,7 +1174,7 @@
     const submitBtn = document.getElementById('submitBtn');
     const contactForm = document.querySelector('.contact-form');
     contactForm.addEventListener('submit', (e) => {
-      if (typeof gtag !== 'G-RCWGCZ67EW') {
+      if (typeof gtag === 'function') {
         gtag('event', 'form_submit', { event_category: 'Contact', event_label: 'Contact Form' });
       }
       submitBtn.textContent = 'Message Sent ✓';
